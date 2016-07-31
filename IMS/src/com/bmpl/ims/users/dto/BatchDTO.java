@@ -1,5 +1,6 @@
 package com.bmpl.ims.users.dto;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class BatchDTO {
@@ -9,7 +10,8 @@ public class BatchDTO {
 	private int totalsets;
 	private String trainername;
 	private String description;
-	private String batchstartdate;
+	private Date batchstartdate;
+	private ArrayList<CourseDTO> courseList;
 	public String getBatchname() {
 		return batchname;
 	}
@@ -40,11 +42,16 @@ public class BatchDTO {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getBatchstartdate() {
+	public Date getBatchstartdate() {
 		return batchstartdate;
 	}
-	public void setBatchstartdate(String batchstartdate) {
+	public void setBatchstartdate(Date batchstartdate) {
 		this.batchstartdate = batchstartdate;
 	}
-	
+	public ArrayList<CourseDTO> getCourseList() {
+		return courseList;
+	}
+	public void setCourseList(ArrayList<CourseDTO> courseList) {
+		this.courseList = courseList;
+	}	
 }
